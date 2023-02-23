@@ -1,0 +1,54 @@
+.title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}
+
+.taskCheckbox {
+    flex: 0 0 10%;
+    max-width: 10%;
+    height: 2rem;
+}
+
+.taskName {
+    flex: 0 0 70%;
+    max-width: 70%;
+    padding: 0 0 0 0.5rem;
+    color: #383f50;
+    font-size: 1.5rem;
+
+    &:taskNameDone {
+        color: #b2b7bb;
+        text-decoration: line-through;
+    }
+}
+
+.taskActions {
+    flex: 0 0 20%;
+    max-width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskBtn {
+    border: 1px solid green;
+    border-radius: 0.7rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    -webkit-border-radius: 0.7rem;
+    -moz-border-radius: 0.7rem;
+    -ms-border-radius: 0.7rem;
+    -o-border-radius: 0.7rem;
+}

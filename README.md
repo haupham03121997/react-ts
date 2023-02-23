@@ -44,3 +44,67 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Setup
+- yarn add sass`
+ - Create  file `.editorconfig`
+
+```bash
+[*]
+indent_style = space
+indent_size = 2
+```
+
+- Create file `.prettierrc`
+```json
+{
+  "arrowParens": "always",
+  "semi": false,
+  "trailingComma": "none",
+  "tabWidth": 2,
+  "endOfLine": "auto",
+  "useTabs": false,
+  "singleQuote": true,
+  "printWidth": 120,
+  "jsxSingleQuote": true
+}
+```
+
+- yarn add prettier eslint-plugin-prettier eslint-config-prettier -D
+- Create `.eslintrc`
+```json
+{
+  "extends": ["react-app", "prettier"],
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
+        "arrowParens": "always",
+        "semi": false,
+        "trailingComma": "none",
+        "tabWidth": 2,
+        "endOfLine": "auto",
+        "useTabs": false,
+        "singleQuote": true,
+        "printWidth": 120,
+        "jsxSingleQuote": true
+      }
+    ]
+  }
+}
+```
+
+- Add scripts to `package.json`
+
+```json
+{
+  "lint": "eslint --ext js,jsx,ts,tsx src/",
+  "lint:fix": "eslint --fix --ext js,jsx,ts,tsx src/",
+  "prettier": "prettier --check \"src/**/(*.jsx|*.js|*.tsx|*ts|*.css|*.scss)\"",
+  "prettier:fix": "prettier --write \"src/**/(*.jsx|*.js|*.tsx|*ts|*.css|*.scss)\""
+}
+```
+
+- Create `.prettierrignore` and `.eslintignore` to ignore folder
+
